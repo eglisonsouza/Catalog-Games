@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogGames", "CatalogGames\CatalogGames.csproj", "{AE7D5055-6C65-4F7F-B543-2412E6D2E935}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogGames.Domain", "CatalogGames.Domain\CatalogGames.Domain.csproj", "{F3E642BD-4ABA-4FDA-AE54-0923ED97AF10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogGames.Api", "CatalogGames.Api\CatalogGames.Api.csproj", "{C24A5777-FE04-42BA-9227-4F605CFC568B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AE7D5055-6C65-4F7F-B543-2412E6D2E935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE7D5055-6C65-4F7F-B543-2412E6D2E935}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE7D5055-6C65-4F7F-B543-2412E6D2E935}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE7D5055-6C65-4F7F-B543-2412E6D2E935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E642BD-4ABA-4FDA-AE54-0923ED97AF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E642BD-4ABA-4FDA-AE54-0923ED97AF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E642BD-4ABA-4FDA-AE54-0923ED97AF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E642BD-4ABA-4FDA-AE54-0923ED97AF10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24A5777-FE04-42BA-9227-4F605CFC568B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24A5777-FE04-42BA-9227-4F605CFC568B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24A5777-FE04-42BA-9227-4F605CFC568B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24A5777-FE04-42BA-9227-4F605CFC568B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

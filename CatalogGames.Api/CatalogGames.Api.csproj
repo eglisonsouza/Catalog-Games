@@ -9,7 +9,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers" />
+      <ProjectReference Include="..\CatalogGames.Domain\CatalogGames.Domain.csproj" />
     </ItemGroup>
 
 </Project>
