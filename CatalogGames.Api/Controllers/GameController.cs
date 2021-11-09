@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CatalogGames.Domain.Arguments.InputModel;
 using CatalogGames.Domain.Arguments.ViewModel;
+using CatalogGames.Domain.Exceptions;
 using CatalogGames.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -49,10 +50,9 @@ namespace CatalogGames.Api.Controllers
             {
                 return Ok(await _gameService.Insert(game));
             }
-            //catch (GameIsExistException)
-            catch (NullReferenceException e)
+            catch (GameIsExistException e)
             {
-                return UnprocessableEntity("There is already a registered game with this name for this producer.");
+                return UnprocessableEntity(e.Message);
             }
             catch (Exception e)
             {
@@ -68,10 +68,13 @@ namespace CatalogGames.Api.Controllers
                 await _gameService.Update(id, game);
                 return Ok();
             }
-            //catch(GameIsNotExistException)
+            catch (GameIsNotExistException e)
+            {
+                return NotFound(e.Message);
+            }
             catch (Exception e)
             {
-                return NotFound("Game is not exist.");
+                return BadRequest("Unable to complete request.");
             }
         }
 
@@ -83,10 +86,13 @@ namespace CatalogGames.Api.Controllers
                 await _gameService.Update(id, price);
                 return Ok();
             }
-            //catch(GameIsNotExistException)
+            catch (GameIsNotExistException e)
+            {
+                return NotFound(e.Message);
+            }
             catch (Exception e)
             {
-                return NotFound("Game is not exist.");
+                return BadRequest("Unable to complete request.");
             }
         }
 
@@ -98,10 +104,13 @@ namespace CatalogGames.Api.Controllers
                 await _gameService.Delete(id);
                 return Ok();
             }
-            //catch(GameIsNotExistException)
+            catch (GameIsNotExistException e)
+            {
+                return NotFound(e.Message);
+            }
             catch (Exception e)
             {
-                return NotFound("Game is not exist.");
+                return BadRequest("Unable to complete request.");
             }
         }
     }
