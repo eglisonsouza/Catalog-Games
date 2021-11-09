@@ -12,10 +12,11 @@ namespace CatalogGames.Domain.Interfaces.Repositories
         Task<Game> Get(Guid id);
         Task<List<Game>> Get(string name, string producer);
 
-        Task<Game> Insert(Game game);
+        Task Insert(Game game);
         
         Task Update(Game game);
 
         Task Delete(Guid id);
+        void Dispose();
     }
 }

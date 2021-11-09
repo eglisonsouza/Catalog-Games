@@ -101,5 +101,10 @@ namespace CatalogGames.Domain.Services
                 throw new GameIsNotExistException();
             await _gameRepository.Delete(id);
         }
+        
+        public void Dispose()
+        {
+            _gameRepository?.Dispose();
+        }
     }
 }
