@@ -10,6 +10,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\CatalogGames.Domain\CatalogGames.Domain.csproj" />
+      <ProjectReference Include="..\CatalogGames.Infra\CatalogGames.Infra.csproj" />
     </ItemGroup>
 
 </Project>

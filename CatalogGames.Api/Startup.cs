@@ -1,20 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CatalogGames.Api.Middleware;
 using CatalogGames.Domain.Interfaces.Repositories;
+using CatalogGames.Infra.Persistence.Repositories;
 using CatalogGames.Domain.Interfaces.Services;
-using CatalogGames.Domain.Repositories;
 using CatalogGames.Domain.Services;
+using CatalogGames.Infra.Persistence.EF;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 namespace CatalogGames.Api
@@ -31,9 +25,10 @@ namespace CatalogGames.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<GameDbContext, GameDbContext>();
 
-            services.AddScoped<IGameService, GameService>();
-            services.AddScoped<IGameRepository, GameRepository>();
+            services.AddTransient<IGameService, GameService>();
+            services.AddTransient<IGameRepository, GameRepository>();
             
             services.AddControllers();
             services.AddSwaggerGen(c =>

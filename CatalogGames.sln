@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogGames.Domain", "Cata
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogGames.Api", "CatalogGames.Api\CatalogGames.Api.csproj", "{C24A5777-FE04-42BA-9227-4F605CFC568B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogGames.Infra", "CatalogGames.Infra\CatalogGames.Infra.csproj", "{76D541D3-A96D-4A7D-987F-01E4C12CAE16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatologGames.Shared", "CatologGames.Shared\CatologGames.Shared.csproj", "{41551987-044B-4199-9DB5-76E3D7E09DB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{C24A5777-FE04-42BA-9227-4F605CFC568B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C24A5777-FE04-42BA-9227-4F605CFC568B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C24A5777-FE04-42BA-9227-4F605CFC568B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D541D3-A96D-4A7D-987F-01E4C12CAE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D541D3-A96D-4A7D-987F-01E4C12CAE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D541D3-A96D-4A7D-987F-01E4C12CAE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D541D3-A96D-4A7D-987F-01E4C12CAE16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41551987-044B-4199-9DB5-76E3D7E09DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41551987-044B-4199-9DB5-76E3D7E09DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41551987-044B-4199-9DB5-76E3D7E09DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41551987-044B-4199-9DB5-76E3D7E09DB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
