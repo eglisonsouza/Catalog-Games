@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CatalogGames.Api.Middleware;
 using CatalogGames.Domain.Interfaces.Repositories;
 using CatalogGames.Domain.Interfaces.Services;
 using CatalogGames.Domain.Repositories;
@@ -51,6 +52,8 @@ namespace CatalogGames.Api
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CatalogGames.Api v1"));
             }
 
+            app.UseMiddleware<ExceptionMiddleware>();
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
